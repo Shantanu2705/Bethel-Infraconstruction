@@ -36,11 +36,11 @@ export default function Navbar() {
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         <Link href="/" className="z-50 flex items-center">
           <Image 
-            src="/logo.jpeg" 
+            src="/logo.png" 
             alt="Bethel Infraconstructions" 
-            width={150} 
-            height={60} 
-            className="h-12 w-auto object-contain rounded-md"
+            width={240} 
+            height={100} 
+            className="h-20 md:h-24 w-auto object-contain drop-shadow-lg"
             priority
           />
         </Link>
