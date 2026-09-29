@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
-import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -81,21 +80,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2"
-      >
-        <span className="text-[10px] uppercase tracking-widest text-gray-400">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        >
-          <ArrowDown size={16} className="text-brand" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

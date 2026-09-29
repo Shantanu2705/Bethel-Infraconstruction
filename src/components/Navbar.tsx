@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -33,13 +34,15 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <Link href="/" className="z-50 flex flex-col">
-          <span className="font-display font-bold text-xl tracking-wider text-white uppercase">
-            Bethel
-          </span>
-          <span className="text-[10px] tracking-widest text-brand uppercase">
-            Infraconstructions
-          </span>
+        <Link href="/" className="z-50 flex items-center">
+          <Image 
+            src="/logo.jpeg" 
+            alt="Bethel Infraconstructions" 
+            width={150} 
+            height={60} 
+            className="h-12 w-auto object-contain rounded-md"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
