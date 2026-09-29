@@ -30,9 +30,10 @@ export default function Hero() {
           <source src="/media/raw/WhatsApp Video 2026-09-28 at 21.35.27.mp4" type="video/mp4" />
         </video>
         
-        {/* Cinematic Gradient Overlay */}
-        <div className="absolute inset-0 bg-darker/60 mix-blend-multiply" />
-        <div className="absolute inset-0 hero-overlay" />
+        {/* Intelligent overlays for readability and transition while keeping video clear */}
+        <div className="absolute inset-0 bg-black/10" />
+        <div className="absolute inset-y-0 left-0 w-full md:w-3/4 bg-gradient-to-r from-black/80 via-black/30 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0A0A0A] to-transparent pointer-events-none" />
       </motion.div>
 
       {/* Content */}
@@ -43,13 +44,13 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
           >
-            <p className="text-brand font-medium tracking-widest uppercase mb-4 text-sm md:text-base flex items-center space-x-4">
+            <p className="text-brand font-medium tracking-widest uppercase mb-4 text-sm md:text-base flex items-center space-x-4 drop-shadow-md">
               <span className="w-8 h-[1px] bg-brand inline-block" />
               <span>Bethel Infraconstructions</span>
             </p>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white uppercase leading-[0.9] tracking-tight mb-6">
+            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white uppercase leading-[0.9] tracking-tight mb-6 drop-shadow-2xl">
               Building with <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
                 Precision.
               </span>
               <br />
@@ -62,7 +63,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-6 mt-12"
+            className="flex flex-col sm:flex-row gap-6 mt-12 drop-shadow-lg"
           >
             <Link
               href="/projects"
@@ -72,7 +73,7 @@ export default function Hero() {
             </Link>
             <Link
               href="/contact"
-              className="px-8 py-4 bg-transparent text-white font-medium text-sm rounded-sm border border-white/30 hover:border-white hover:bg-white/5 transition-all uppercase tracking-wider text-center"
+              className="px-8 py-4 bg-black/20 backdrop-blur-sm text-white font-medium text-sm rounded-sm border border-white/30 hover:border-white hover:bg-white/10 transition-all uppercase tracking-wider text-center"
             >
               Request a Quote
             </Link>
